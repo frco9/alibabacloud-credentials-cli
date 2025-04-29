@@ -57,13 +57,16 @@ class CredentialModel {
   toEnv() {
     const result = {
       'ALIBABACLOUD_ACCESS_KEY_ID': this.id,
+      'ALIBABA_CLOUD_ACCESS_KEY_ID': this.id,
       'ALICLOUD_ACCESS_KEY_ID': this.id,
       'ALIBABACLOUD_ACCESS_KEY_SECRET': this.secret,
+      'ALIBABA_CLOUD_ACCESS_KEY_SECRET': this.secret,
       'ALICLOUD_ACCESS_KEY_SECRET': this.secret
     };
 
     if (this.token) {
       result['ALIBABACLOUD_SECURITY_TOKEN'] = this.token;
+      result['ALIBABA_CLOUD_SECURITY_TOKEN'] = this.token;
       result['ALICLOUD_SECURITY_TOKEN'] = this.token;
       result['SECURITY_TOKEN'] = this.token;
     }
